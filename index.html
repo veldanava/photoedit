@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>PHOTOSHOP COY</title>
+
+      <!--BUAT FRAMEWORK-->
+      <link rel="icon" href="https://i.pinimg.com/564x/f5/e6/60/f5e660f86d51bfb095ab952c7380b9db.jpg">
+      <link href="/dist/output.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="style.css">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <embed src="mantrahujan.mp3" loop="true" autostart="true" width="2" height="0">
+   </head>
+   <body>
+
+      <!--MAIN SCRIPT-->
+      <div class="main">
+         <div class="Tools">
+            <ul>
+               <li>
+                  <i class='bx bxs-brightness-half'></i>
+                  <p>BrightNess</p>
+               </li>
+               <li>
+                  <i class='bx bxs-brush' ></i>
+                  <p>Blur</p>
+               </li>
+               <li>
+                  <i class='bx bxs-collection' ></i>
+                  <p>GreyScale</p>
+               </li>
+               <li>
+                  <i class='bx bxs-color-fill' ></i>
+                  <p>Hue</p>
+               </li>
+               <li>
+                  <i class='bx bxs-magic-wand' ></i>
+                  <p>Saturation</p>
+               </li>
+               <li onclick="Download_btn()">
+                  <i class='bx bx-export' ></i>
+                  <p>Export</p>
+               </li>
+            </ul>
+         </div>
+         <div class="content">
+            <p id="logo">jangan lupa follow</p>
+            
+            <div class="choose_image">
+               <div class="upload_img_box">
+                  <i class='bx bxs-image-add' ></i><br>
+                  <input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg, image/png">
+                  <p id="hint">PILIH GAMBAR</p>
+               </div>
+            </div>
+            <canvas id="image_canvas"></canvas>
+            <div class="image_holder">
+               <button id="remove_img_btn"><i class='bx bxs-message-square-x' ></i></button>
+               <img src="" alt="img" id="image">
+            </div>
+            <div class="options">
+               <div class="option">
+                  <input type="range" max="200" min="0" value="100" id="brightness" class="slider">
+                  <p id="brightVal" class="show_value">100</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="40" min="0" value="0" id="blur" class="slider">
+                  <p id="blurVal" class="show_value">0</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="100" min="0" value="0" id="greyScale" class="slider">
+                  <p id="greyVal" class="show_value">0</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="100" min="0" value="0" id="hue" class="slider">
+                  <p id="hueVal" class="show_value">0</p>
+               </div>
+               <div class="option">
+                  <input type="range" max="100" min="1" value="1" id="saturation" class="slider">
+                  <p id="saturationVal" class="show_value">1</p>
+               </div>
+            </div>
+            <button id="clearAll"><span>Reset</span><i class='bx bx-reset' ></i></button>
+         </div>
+      </div>
+
+      <!--BUAT FRAMEWORK-->
+      <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="d08a8d73-c22a-40e4-83a0-a99258d67624";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+      <script src="main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,270 @@
+/* CSS BIAR KEREN */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url('tohka.jpg');
+	background-position: center;
+}
+
+.main {
+	/* From https://css.glass */
+	height: 480px;
+	width: 900px;
+	display: flex;
+	background: rgba(40, 12, 53, 0.288);
+	border-radius: 16px;
+	box-shadow: 0px 4px 8px 5px rgba(59, 43, 59, 0.61);
+	backdrop-filter: blur(7.8px);
+	-webkit-backdrop-filter: blur(7.8px);
+	overflow: hidden;
+	transition: 0.7s;
+}
+
+.main:hover {
+	height: 490px;
+	width: 910px;
+	box-shadow: 1px 5px 9px 6px rgba(59, 43, 59, 0.61);
+	transition: 0.7s;
+}
+
+
+/*PART ALAT*/
+.Tools {
+	height: 100%;
+	width: 10%;
+	box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.Tools ul {
+	list-style: none;
+}
+
+.Tools ul li {
+	margin-top: 3px;
+	margin-left: -15px;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.Tools ul .active_option p {
+	opacity: 1;
+	margin-top: 8px;
+}
+
+.Tools ul .active_option i {
+	color: #8b43ff;
+}
+
+.Tools ul li i {
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 10px;
+	font-size: 2em;
+}
+
+.Tools ul li:hover i {
+	color: #8b43ff;
+}
+
+
+.Tools ul li:hover p {
+	opacity: 1;
+	margin-top: 8px;
+}
+
+.Tools ul li p {
+	opacity: 0;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+
+/*content part*/
+.content {
+	position: relative;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.content #logo {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	letter-spacing: 3px;
+	font-family: 'Staatliches', cursive;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+
+.choose_image {
+	width: 70%;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.upload_img_box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+p#hint {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 1.2em;
+}
+
+.upload_img_box i {
+	font-size: 2.2em;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#selectedImage {
+	display: none;
+}
+
+
+/*canvas */
+#image_canvas {
+	display: none;
+}
+
+
+/*image holder part*/
+.image_holder {
+	position: relative;
+	display: none;
+	width: 100%;
+	height: 80%;
+}
+
+.image_holder img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+}
+
+.image_holder button {
+	position: absolute;
+	display: none;
+	top: -30px;
+	left: 0px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #8b43ff;
+	font-size: 1.8em;
+	background: none;
+	transform: rotate(270deg);
+}
+
+
+/*options part */
+.options {
+	position: absolute;
+	transform: translateY(80px);
+	bottom: 0;
+	height: 50px;
+	width: 50%;
+	padding: 0 25px;
+	border-radius: 10px 10px 0 0;
+	transition: 0.5s;
+	box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, 0.05);
+}
+
+.options .active_controller {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.option {
+	display: none;
+}
+
+.option p {
+	margin-top: 15px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/*Range slider*/
+input[type="range"] {
+	width: 80%;
+	height: 5px;
+	cursor: pointer;
+	outline: none;
+}
+
+
+/*clear or reset btn */
+#clearAll {
+	position: absolute;
+	bottom: 5px;
+	right: 20px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s;
+	padding: 10px;
+	color: #ffffff;
+	background: #8b43ff;
+	transform: translateX(150px);
+	box-shadow: 0.1px 4px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+#clearAll:hover{
+	background-color: #6f36cc;
+	transition: 0.5s;
+}
+
+#clearAll span {
+	margin-right: 10px;
+}
+
+
+/* fade out typedjs*/
+.typed-fade-out {
+}
